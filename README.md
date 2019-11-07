@@ -15,7 +15,7 @@ Nutshell is a new product offering that you have been tasked with building. It's
 You will be utilizing all of the skills and concepts that you've learned up to this point in the course.
 
 1. Functions
-1. Databases/API
+1. Databases/API ([JSON Server Documentation](https://github.com/typicode/json-server))
 1. Github
 1. Objects
 1. CSS/Flexbox
