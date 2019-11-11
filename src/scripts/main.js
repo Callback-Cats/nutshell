@@ -9,3 +9,5 @@ const message = "Time to build an application that gives you all the information
 document.querySelector("#container").innerHTML = `<h1>${message}</h1>`
 
 console.log(message)
+
+// sessionStorage.setItem("activeUser", user.id)
