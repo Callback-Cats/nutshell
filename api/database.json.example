@@ -1,0 +1,177 @@
+
+{
+    "users": [
+        {
+            "id": 1,            
+        "username": "larrydavid@email.com",
+        "password": "seinfield1"
+        },
+
+        {
+        "id": 2,    
+        "username": "cheryldavid@email.com",
+        "password": "seinfield2"
+        },
+
+        {
+        "id": 3,
+        `"username": "jeffgreene@email.com",
+        "password": "seinfield3"
+        },
+
+        {
+        "id": 4,
+        "username": "susiegreene@email.com",
+        "password": "seinfield4"
+        },
+
+        {
+        "id": 5,
+        "username": "richardlewis@email.com",
+        "password": "seinfield5"
+        }
+        ],
+
+    "news": [
+        {
+            "id": 1,
+            "user_id": 1, 
+            "url": "https://local.theonion.com/cocky-atom-that-started-out-in-cosmos-shattering-supern-1839773365",
+            "title": "Cocky Atom That Started Out In Cosmos-Shattering Supernova Reduced To Humble Role In Urine Puddle",
+            "synopsis": "Check out this story about the circle of life",
+            "time_stamp": "11.11.2019 8:00:00"
+        },
+
+        {
+            "id": 2,
+            "user_id": 2,
+            "url": "https://www.theonion.com/officials-say-outbreak-of-australian-wildfire-may-have-1839780866",
+            "title": "Officials Say Outbreak Of Australian Wildfire May Have Spread From Engulfed Passenger Traveling From U.S.",
+            "synopsis": "Officials Say Outbreak Of Australian Wildfire May Have Spread From Engulfed Passenger Traveling From U.S.",
+            "time_stamp": "11.11.2019 8:00:01"
+        },
+        {
+            "id": 3,
+            "user_id": 3,
+            "url": "https://www.theonion.com/officials-say-outbreak-of-australian-wildfire-may-have-1839780866",
+            "title": "How your parents may have shaped the way you act at work",
+            "synopsis": "Checkout this story about yourself",
+            "time_stamp": "11.11.2019 8:00:02"
+        },    
+
+        {
+            "id": 4,
+            "user_id": 4,
+            "url": "https://local.theonion.com/bar-fight-de-escalates-after-both-parties-unable-to-tea-1839698106",
+            "title": "Bar Fight De-Escalates After Both Parties Unable To Tear Off T-Shirts",
+            "synopsis": "look at these guys and their super strong shirts",
+            "time_stamp": "11.11.2019 8:00:02"
+        }
+        
+    ],
+
+    "messages": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "message": "Hey, what is up?",
+            "time_stamp": "11.11.2019 8:00:02"
+        },
+        {
+            "id": 2,
+            user_id: 2,
+            "message": "Hello, this message is for you...",
+            "time_stamp": "11.11.2019 8:00:02"
+        },
+        {
+            "id": 3,
+            "user_id": 3,
+            "message": "I do not acknowledge your message.",
+            "time_stamp": "11.11.2019 8:00:02"
+        },
+        {
+            "id": 4,
+            "user_id": 4,
+            "message": "I need help?",
+            "time_stamp": "11.11.2019 8:00:02"
+        }
+    ],
+
+    "events": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "name": "Concert",
+            "date": "2019-11-11",
+            "location": "Bridgestone"
+        },
+        {
+            "id": 2,
+            "user_id": 2,
+            "name": "Dodgers Game",
+            "date": "2019-11-25",
+            "location": "Dodgers Stadium" 
+        },
+        {
+            "id": 3,
+            "user_id": 3,
+            "name": "Party",
+            "date": "2019-11-13",
+            "location": "My house" 
+        }
+    ],
+    
+    "tasks": [
+        {
+            "id": 1,
+            "user_id": 1,  
+            "date": "2019-11-11",
+            "task": "Get Divorced",
+            "complete": false
+        },
+
+        {
+            "id": 2,
+            "user_id": 2,  
+            "date": "2019-08-11",
+            "task": "Harass M.J. Fox",
+            "complete": false
+        },
+
+        {
+            "id": 3,
+            "user_id": 3,  
+            "date": "2019-27-11",
+            "task": "Star in 'The Producers'",
+            "complete": false
+        }
+    ],
+    
+    "friends": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "user_id": 2,
+            "date": "2019-11-11" ,
+            "location": "Los Angeles, CA",
+        },
+
+        {
+            "id": 2,
+            "user_id": 2,
+            "user_id": 3,
+            "date": "2019-23-11",
+            "location": "Woodland Hill, CA",
+        },
+
+        {
+            "id": 3,
+            "user_id": 3,
+            "user_id": 5,
+            "date": "2019-19-11",
+            "location": "Pasadene, CA",
+        }
+    ]
+}
+
+
