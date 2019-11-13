@@ -1,5 +1,4 @@
 import taskDomRenderers from "./tasks/domRenderer.js"
-import taskEventListeners from "./tasks/eventListeners.js";
 import API from "./tasks/data.js";
 import newsAPI from "./news/data.js";
 import newsDomRenderers from "./news/domRenderer.js";
@@ -9,6 +8,11 @@ console.log("We got this, guys.")
 
 taskDomRenderers.taskFormRender()
 API.getTaskData()
+.then(tasks => tasks.forEach(task => {
+    console.log(task)
+    taskDomRenderers.taskRender(task)
+})
+)
 
 newsAPI.getNewsArticle()
 .then(data => {

@@ -9,9 +9,6 @@ const newsDomRenderers = {
         newsEventListeners.newNewsSaveButtonEventListener()
     },
 
-    {
-        
-    }
 }
 
 export default newsDomRenderers
