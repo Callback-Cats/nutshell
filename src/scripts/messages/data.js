@@ -1,9 +1,10 @@
-const baseUrl = "http://localhost:8088/messages"
+const messagebaseUrl = "http://localhost:8088/messages"
 
 const messageAPI = {
-    getMessageData: () => fetch(baseUrl)
+    getMessageData: () => fetch(messagebaseUrl)
     .then(response => response.json()),
     
 }
 
-export default API
+
+export default messageAPI
