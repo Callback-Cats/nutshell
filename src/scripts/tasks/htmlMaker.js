@@ -4,7 +4,6 @@ export default {
     taskHtmlFormMaker () {
         return `
 <form id="taskForm">
-<h1>To Do List</h1>
 <label for="text">New Task:</label>
 <br>
 <input type="text" name="text" id="text" placeholder="eg. play a round of golf">
@@ -14,7 +13,18 @@ export default {
 <input type="date" name="date" id="date">
 <br>
 </form>
-<input type="submit" name="submit" id="submit"> 
+<input type="submit" name="submit" id="submit">
     `
-    }
+    },
+
+    taskListRenderer (taskObj) {
+        return `
+<article id="${taskObj.id}">
+<input type="checkbox" id="type-checkbox"><span>Done!</span> 
+    <p>Task: ${taskObj.task}</p>
+    <p>To be completed by: ${taskObj.date}</p>
+    <input type="submit" id="edit" name="edit" value="Edit">
+</article>
+    `
+  }
 }
