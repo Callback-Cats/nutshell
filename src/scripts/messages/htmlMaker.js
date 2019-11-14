@@ -17,5 +17,15 @@ export default {
 </form>
 <input type="submit" name="send" id="send" value="send">
     `
-    }
+    },
+
+    messageListRenderer(messageObj) {
+        return `
+    <p>from who:${messageObj.id}</p>
+    <p>message:${messageObj.message}</p>
+    <p>time sent ${messageObj.time_stamp}</p>
+    <input type="submit" id="edit" name="edit" value="Edit">
+</article>
+    `
+}
 }
