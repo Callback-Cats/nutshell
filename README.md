@@ -111,3 +111,10 @@ To help you along, here is a visualization of a few features, as envisioned by o
    * Short paragraphs
    * Bulleted lists
 7. Strive for consistency.
+
+## ERD
+
+This is our ERD!
+
+![our ERD](./Nutshell_ERD.png)
+
