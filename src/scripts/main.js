@@ -35,7 +35,7 @@ newsAPI.getNewsArticle()
 eventsAPI.getEventsData()
     .then(events => renderDom.renderEvents(events)
     )
-    
+    renderDom.renderCreateEventForm()
 
 newsAPI.getNewsArticle()
     .then(data => {

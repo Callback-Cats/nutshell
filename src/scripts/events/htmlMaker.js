@@ -11,7 +11,7 @@ const eventsHtmlMaker = {
         <h3>${event.name}</h3>
         <p>${event.date}<p>
         <p>${event.location}<p>
-        </section>
+        <button type= "button" id="saveEntry--${event.id}" class="save-button">Save</button>
     `
     },
 
@@ -33,7 +33,7 @@ const eventsHtmlMaker = {
         <input type="text" name="location-name" id="location" placeholder="Upcoming Event">
         <br>
         </form>
-        <button type="button" id="save-entry">Save</button>
+        <button type="button" id="add-entry">Add new entry</button>
         `
     }
 
