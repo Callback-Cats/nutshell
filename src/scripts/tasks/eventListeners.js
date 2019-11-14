@@ -13,21 +13,23 @@ export default {
             location.reload()
         })
     },
-    taskEditButtonEventListener() {
-        let taskEditButton = document.querySelector("#edit")
-        taskEditButton.addEventListener("click", () => {
 
-            if 
+    // taskEditButtonEventListener () {
+    //     let taskEditButton = document.querySelector("#edit")
+    //     taskEditButton.addEventListener("click", () => {
+
+    // if
 
 
 
-        })
-    },
+    //     })
+    // },
+
     taskCheckboxEventListener() {
        //TODO: target checkbox using some value--name, value, etc.
        //TODO: add class name if checked so I can target with CSS
-       //TODO: PUT to DOM to change completed to true.
-       const checkbox = document.querySelector('input[value="Edit"]') 
+       //TODO: PUT to DOM to change completed to true
+       const checkbox = document.querySelector("input[value='Edit']")
        checkbox.onchange = () => {
             if (checkbox.checked) {
                 

@@ -12,7 +12,7 @@ API.getTaskData()
     .then(tasks => tasks.forEach(task => {
         console.log(task)
         taskDomRenderers.taskRender(task)
-        taskEventListener.taskEditButtonEventListener()
+        // taskEventListener.taskEditButtonEventListener()
         taskEventListener.taskCheckboxEventListener()
 })
 )
