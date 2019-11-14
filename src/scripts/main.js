@@ -2,6 +2,9 @@ import taskDomRenderers from "./tasks/domRenderer.js"
 import API from "./tasks/data.js";
 import newsAPI from "./news/data.js";
 import newsDomRenderers from "./news/domRenderer.js";
+import messageAPI from "./messages/data.js"
+import messageHTML from "./messages/htmlMaker.js"
+import messageDomRenderer from "./messages/domRenderer.js"
 
 console.log("We got this, guys.")
 // sessionStorage.setItem("activeUser", user.id)
@@ -21,3 +24,11 @@ newsAPI.getNewsArticle()
     })
 
     newsDomRenderers.newsFormRender()
+
+    messageAPI.getMessageData()
+    .then(message => message.forEach(message=> {
+        messageDomRenderer.messageRender(message)
+     })
+    )
+    
+    messageDomRenderer.messageFormRender()
