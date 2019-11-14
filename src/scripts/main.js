@@ -2,6 +2,9 @@ import taskDomRenderers from "./tasks/domRenderer.js"
 import API from "./tasks/data.js";
 import eventsAPI from "./events/data.js"
 import renderDom from "./events/domRenderer.js"
+import messageAPI from "./messages/data.js"
+import messageHTML from "./messages/htmlMaker.js"
+import messageDomRenderer from "./messages/domRenderer.js"
 import newsAPI from "./news/data.js";
 import newsDomRenderers from "./news/domRenderer.js";
 
@@ -10,7 +13,6 @@ console.log("We got this, guys.")
 
 taskDomRenderers.taskFormRender()
 API.getTaskData()
-
     .then(tasks => tasks.forEach(task => {
         console.log(task)
         taskDomRenderers.taskRender(task)
@@ -21,7 +23,6 @@ eventsAPI.getEventsData()
     .then(events => renderDom.renderEvents(events)
     )
     
-renderDom.renderCreateEventForm()
 
 newsAPI.getNewsArticle()
     .then(data => {
@@ -29,5 +30,17 @@ newsAPI.getNewsArticle()
         console.log(data)
     })
 
+
 newsDomRenderers.newsFormRender()
+
+    messageAPI.getMessageData()
+    .then(message => message.forEach(message=> {
+        console.log(message)
+        messageDomRenderer.messageRender(message)
+    })
+    )
+    
+    messageDomRenderer.messageFormRender()
+    newsDomRenderers.newsFormRender()
+
 
