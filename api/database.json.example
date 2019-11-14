@@ -3,32 +3,32 @@
     "users": [
         {
             "id": 1,            
-        "username": "larrydavid@email.com",
-        "password": "seinfield1"
+            "username": "larrydavid@email.com",
+            "password": "seinfield1"
         },
 
         {
-        "id": 2,    
-        "username": "cheryldavid@email.com",
-        "password": "seinfield2"
+            "id": 2,    
+            "username": "cheryldavid@email.com",
+            "password": "seinfield2"
         },
 
         {
-        "id": 3,
-        `"username": "jeffgreene@email.com",
-        "password": "seinfield3"
+            "id": 3,
+            "username": "jeffgreene@email.com",
+            "password": "seinfield3"
         },
 
         {
-        "id": 4,
-        "username": "susiegreene@email.com",
-        "password": "seinfield4"
+            "id": 4,
+            "username": "susiegreene@email.com",
+            "password": "seinfield4"
         },
 
         {
-        "id": 5,
-        "username": "richardlewis@email.com",
-        "password": "seinfield5"
+            "id": 5,
+            "username": "richardlewis@email.com",
+            "password": "seinfield5"
         }
         ],
 
@@ -79,7 +79,7 @@
         },
         {
             "id": 2,
-            user_id: 2,
+            "user_id": 2,
             "message": "Hello, this message is for you...",
             "time_stamp": "11.11.2019 8:00:02"
         },
@@ -150,28 +150,26 @@
     "friends": [
         {
             "id": 1,
-            "user_id": 1,
+            "current_user_id": 1,
             "user_id": 2,
             "date": "2019-11-11" ,
-            "location": "Los Angeles, CA",
+            "location": "Los Angeles, CA"
         },
 
         {
             "id": 2,
-            "user_id": 2,
+            "current_user_id": 2,
             "user_id": 3,
             "date": "2019-23-11",
-            "location": "Woodland Hill, CA",
+            "location": "Woodland Hill, CA"
         },
 
         {
             "id": 3,
-            "user_id": 3,
+            "current_user_id": 3,
             "user_id": 5,
             "date": "2019-19-11",
-            "location": "Pasadene, CA",
+            "location": "Pasadene, CA"
         }
     ]
 }
-
-
