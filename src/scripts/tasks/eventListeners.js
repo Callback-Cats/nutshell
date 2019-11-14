@@ -26,15 +26,23 @@ export default {
     // },
 
     taskCheckboxEventListener() {
-       //TODO: target checkbox using some value--name, value, etc.
-       //TODO: add class name if checked so I can target with CSS
-       //TODO: PUT to DOM to change completed to true
-       const checkbox = document.querySelector("input[value='Edit']")
-       checkbox.onchange = () => {
+        //TODO: target checkbox using some value--name, value, etc.
+        //TODO: add class name if checked so I can target with CSS
+        //TODO: PUT to DOM to change completed to true
+        const checkbox = document.querySelector("input[value='Edit']")
+        checkbox.onchange = () => {
             if (checkbox.checked) {
-                
+
             }
         }
+    },
+
+    taskDeleteEventListener() {
+        const taskDeleteButton = document.querySelector("#delete")
+        taskDeleteButton.addEventListener("click", () => {
+            API.taskDelete()
+
+        })
     }
 }
 //    let sessionId = document.getElementbyId("submit")

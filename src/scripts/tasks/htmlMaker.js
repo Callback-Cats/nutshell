@@ -24,6 +24,7 @@ export default {
     <p>Task: ${taskObj.task}</p>
     <p>To be completed by: ${taskObj.date}</p>
     <input type="submit" id="edit" name="edit" value="Edit">
+    <input type="submit" id="delete" name="delete" value="Delete">
 </article>
     `
   }
