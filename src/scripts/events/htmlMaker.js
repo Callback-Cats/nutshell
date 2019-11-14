@@ -2,7 +2,7 @@
 
 
 
-const eventsFormManager = {
+const eventsHtmlMaker = {
 
     createEventForm() {
         return `

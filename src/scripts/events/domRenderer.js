@@ -1,35 +1,20 @@
-import eventsFormManager from "./htmlMaker"
+import eventsHtmlMaker from "./htmlMaker"
 
 const renderDom = {
+
+    renderNewEventForm() {
+        const eventEntryFormHtml = document.querySelector("events-container")
+        // eventEntryFormHtml.innerHTML = eventsHtmlMaker.createEventForm()
+
+    },
     renderEvents(events) {
-        let htmlForAllEvents= ""
+        let htmlForAllEvents = ""
         events.forEach(event => {
-            const eventHtml = eventsFormManager.makeNewEventComponent(event)
+            //TODO: Make makeNewEventComponent function htmlMaker
+            // const eventHtml = eventsFormManager.makeNewEventComponent(event)
             htmlForAllEvents += eventHtml
         })
-        const logAllEventsDiv = document.querySelector("#events-log-container")(event)
+        const logArticle = document.querySelector("#events")
+        logArticle.innerHTML = htmlForAllEvents
     }
-
-
 }
-
-
-
-
-
-
-// const renderDom = {
-//     renderJournalEntries(entries) {
-//       let HtmlForAllEntries = ""
-//       entries.forEach(entry => {
-//         const entryHtml = entryManager.makeJournalEntryComponent(entry)
-//         HtmlForAllEntries += entryHtml
-//       })
-//       const logArticle = document.querySelector(".entryLog")(event)
-//       logArticle.innerHTML = HtmlForAllEntries
-//     },
-//     renderJournalEntryForm() {
-//       const entryFormHtml = document.getElementById("journal-entry-form")
-//       entryFormHtml.innerHTML = entryManager.makeJournalEntryForm()
-//     }
-//   }
