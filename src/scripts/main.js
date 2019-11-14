@@ -1,5 +1,7 @@
 import taskDomRenderers from "./tasks/domRenderer.js"
 import API from "./tasks/data.js";
+import eventsAPI from "./events/data.js"
+import renderDom from "./events/domRenderer.js"
 import newsAPI from "./news/data.js";
 import newsDomRenderers from "./news/domRenderer.js";
 
@@ -15,19 +17,17 @@ API.getTaskData()
     })
     )
 
-data.getEventsData()
-    .then(events => console.log("WOW GREAT JOB SHAWNA YOU ARE LEARNING SO MUCH IT'S REALLY GREAT", events))
-.then(tasks => tasks.forEach(task => {
-    console.log(task)
-    taskDomRenderers.taskRender(task)
-})
-)
+eventsAPI.getEventsData()
+    .then(events => renderDom.renderEvents(events)
+    )
+    
+renderDom.renderCreateEventForm()
 
 newsAPI.getNewsArticle()
-.then(data => {
+    .then(data => {
         // Work with JSON data here
         console.log(data)
     })
 
-    newsDomRenderers.newsFormRender()
+newsDomRenderers.newsFormRender()
 

@@ -4,6 +4,17 @@
 
 const eventsHtmlMaker = {
 
+    renderLoggedEventComponent(event) {
+        console.log("event",event)
+        return `
+        <section>
+        <h3>${event.name}</h3>
+        <p>${event.date}<p>
+        <p>${event.location}<p>
+        </section>
+    `
+    },
+
     createEventForm() {
         return `
 
@@ -28,4 +39,4 @@ const eventsHtmlMaker = {
 
 }
 
-export default eventsFormManager
+export default eventsHtmlMaker
