@@ -15,7 +15,7 @@ console.log("We got this, guys.")
 taskDomRenderers.taskFormRender()
 API.getTaskData()
     .then(tasks => tasks.forEach(task => {
-        console.log(task)
+        // console.log(task)
         taskDomRenderers.taskRender(task)
         taskEventListener.taskDeleteEditButtonEventListener()
         // taskEventListener.taskEditButtonEventListener()
@@ -26,7 +26,7 @@ API.getTaskData()
 newsAPI.getNewsArticle()
     .then(data => {
         // Work with JSON data here
-        console.log(data)
+        // console.log(data)
     })
 
 newsDomRenderers.newsFormRender()
@@ -41,7 +41,7 @@ eventsAPI.getEventsData()
 newsAPI.getNewsArticle()
     .then(data => {
         // Work with JSON data here
-        console.log(data)
+        // console.log(data)
     })
 
 
@@ -49,7 +49,7 @@ newsDomRenderers.newsFormRender()
 
 messageAPI.getMessageData()
     .then(message => message.forEach(message => {
-        console.log(message)
+        // console.log(message)
         messageDomRenderer.messageRender(message)
     })
     )

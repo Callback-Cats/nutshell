@@ -13,7 +13,7 @@ const taskDomRenderers = {
         let taskString = ""
         let taskRenderContainer = document.querySelector("#tasks-rendered")
         taskString = htmlMaker.taskListRenderer(taskObj)
-        console.log(taskString)
+        // console.log(taskString)
         taskRenderContainer.innerHTML += taskString
     },
 
@@ -24,7 +24,7 @@ const taskDomRenderers = {
         let taskInput = document.querySelector("#text")
         API.taskToEdit(taskObj)
         .then(returnedTask => {
-            console.log(returnedTask)
+            console.log("RETURNED TASK ",returnedTask)
             hiddenId.value = returnedTask.id
             dateInput.value = returnedTask.date
             taskInput.value = returnedTask.task

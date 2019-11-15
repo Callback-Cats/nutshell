@@ -5,7 +5,7 @@
 const eventsHtmlMaker = {
 
     renderLoggedEventComponent(event) {
-        console.log("event",event)
+        // console.log("event",event)
         return `
         <section>
         <h3>${event.name}</h3>

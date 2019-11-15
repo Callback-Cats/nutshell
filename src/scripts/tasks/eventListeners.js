@@ -6,13 +6,15 @@ export default {
     taskSubmitButtonEventListener() {
         let taskSubmitButton = document.querySelector("#submit")
         taskSubmitButton.addEventListener("click", () => {
-            const hiddenFieldId = document.getElementById("formId")
-            if (hiddenFieldId.value !== "") {
-                let dateInput = document.querySelector("#date")
-                let taskInput = document.querySelector("#task")
-                console.log(taskInput)
-                console.log(dateInput)
-                let editedFactoryFunction = factoryFunctionMaker.tasksFactoryFunction(taskInput.value, dateInput.value, )
+            const hiddenFieldId = document.getElementById("formId").value
+            console.log("HIDDENFIELDID", hiddenFieldId)
+            if (hiddenFieldId !== "") {
+                let dateInput = document.querySelector("#date").value
+                let taskInput = document.querySelector("#text").value
+                console.log("TASK INPUT", taskInput)
+                console.log("DATE INPUT", dateInput)
+                let editedFactoryFunction = factoryFunctionMaker.tasksFactoryFunction(taskInput, dateInput)
+                console.log("EDITED FACTORY FUNCTION", editedFactoryFunction)
                 API.taskToPut(hiddenFieldId, editedFactoryFunction)
                 location.reload()
             } else {
@@ -20,8 +22,9 @@ export default {
             const dateField = document.querySelector("#date").value
 
             let taskObject = factoryFunctionMaker.tasksFactoryFunction(entryField, dateField)
+            console.log("TASK OBJECT", taskObject)
             API.postTaskData(taskObject)
-            location.reload()
+  
         }
     })
 },
@@ -51,7 +54,7 @@ export default {
 
     taskDeleteEditButtonEventListener() {
         const taskDeleteSection = document.querySelector("#tasks-rendered")
-        console.log("TASK DELETE", taskDeleteSection)
+        // console.log("TASK DELETE", taskDeleteSection)
         taskDeleteSection.addEventListener("click", event => {
             if (event.target.id.startsWith("deleteTask--")) {
                 const taskToDelete = event.target.id.split("--")[1]
@@ -61,6 +64,7 @@ export default {
             } else if (event.target.id.startsWith("editTask--")) {
                 const taskToEdit =
                     event.target.id.split("--")[1]
+                    console.log("TASK TO EDIT ",taskToEdit)
                 taskDomRenderers.taskEditEntryToForm(taskToEdit)
             }
         })
