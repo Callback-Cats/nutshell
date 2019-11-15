@@ -17,11 +17,12 @@ API.getTaskData()
     .then(tasks => tasks.forEach(task => {
         // console.log(task)
         taskDomRenderers.taskRender(task)
-        taskEventListener.taskDeleteEditButtonEventListener()
         // taskEventListener.taskEditButtonEventListener()
-        // taskEventListener.taskCheckboxEventListener()
     })
     )
+taskEventListener.taskDeleteEditButtonEventListener()
+taskEventListener.taskCheckboxEventListener()
+
 
 newsAPI.getNewsArticle()
     .then(data => {

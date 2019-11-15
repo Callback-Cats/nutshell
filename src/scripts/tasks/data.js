@@ -38,7 +38,11 @@ const API = {
             body: JSON.stringify(editedTaskObj)
         })
         .then(response => response.json())
-    }
+    },
+
+    // taskPatch(taskObj) {
+    //     return fetch (`${baseUrl}/${hiddenId}`)
+    // }
 }
 
 export default API

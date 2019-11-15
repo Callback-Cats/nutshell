@@ -23,7 +23,7 @@ export default {
     taskListRenderer (taskObj) {
         return `
 <article id="tasks--${taskObj.id}">
-<input type="checkbox" id="type-checkbox" name="checkbox"><span>Done!</span> 
+<input type="checkbox" id=checkbox--${taskObj.id}" name="checkbox"><span>Done!</span> 
     <p>Task: ${taskObj.task}</p>
     <p>To be completed by: ${taskObj.date}</p>
     <button id="editTask--${taskObj.id}" name="edit">Edit</button>

@@ -9,11 +9,11 @@ export default {
     },
 
 
-changeFalseToTrueFunction() {
+    booleanFactoryFunction(taskInput, dateInput) {
         return {
             user_id: 1,
-            date: date,
-            task: task,
+            date: dateInput,
+            task: taskInput,
             complete: true
         }
     }

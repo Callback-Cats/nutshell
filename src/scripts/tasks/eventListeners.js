@@ -18,39 +18,36 @@ export default {
                 API.taskToPut(hiddenFieldId, editedFactoryFunction)
                 location.reload()
             } else {
-            const entryField = document.querySelector("#text").value
-            const dateField = document.querySelector("#date").value
+                const entryField = document.querySelector("#text").value
+                const dateField = document.querySelector("#date").value
 
-            let taskObject = factoryFunctionMaker.tasksFactoryFunction(entryField, dateField)
-            console.log("TASK OBJECT", taskObject)
-            API.postTaskData(taskObject)
-  
-        }
-    })
-},
+                let taskObject = factoryFunctionMaker.tasksFactoryFunction(entryField, dateField)
+                console.log("TASK OBJECT", taskObject)
+                API.postTaskData(taskObject)
+                location.reload()
+            }
+        })
+    },
 
-    // taskEditButtonEventListener () {
-    //     let taskEditButton = document.querySelector("#edit")
-    //     taskEditButton.addEventListener("click", () => {
-
-    // if
-
-
-
-    //     })
-    // },
-
-    //     taskCheckboxEventListener() {
-    //         //TODO: target checkbox using some value--name, value, etc.
-    //         //TODO: add class name if checked so I can target with CSS
-    //         //TODO: PUT to DOM to change completed to true
-    //         const checkbox = document.querySelector("#type-checkbox")
-    //         checkbox.addEventListener("onchange", () => {
-    //             if (checkbox.checked == true) {
-
-    //                 factoryFunctionMaker.changeFalseToTrueFunction()
-    //             }
-    //         },
+    taskCheckboxEventListener() {
+        //TODO: target checkbox using some value--name, value, etc.
+        //TODO: add class name if checked so I can target with CSS
+        //TODO: PUT to DOM to change completed to true
+        const checkbox = document.querySelector("#tasks-rendered")
+        checkbox.addEventListener("onchange", () => {
+            const hiddenFieldId = document.getElementById("formId").value
+            if (event.target.id.startsWith("checkbox--")) {
+                let taskToCheck = event.target.id.split("--")[1]
+                console.log(taskToCheck)
+                let dateInput = document.querySelector("#date").value
+                let taskInput = document.querySelector("#text").value
+                let booleanFactoryFunction = factoryFunctionMaker.booleanFactoryFunction(taskInput, dateInput)
+                if (checkbox.checked === true) {
+                    API.taskToPut(hiddenFieldId, booleanFactoryFunction)
+                }
+            }
+        })
+    },
 
     taskDeleteEditButtonEventListener() {
         const taskDeleteSection = document.querySelector("#tasks-rendered")
@@ -64,7 +61,7 @@ export default {
             } else if (event.target.id.startsWith("editTask--")) {
                 const taskToEdit =
                     event.target.id.split("--")[1]
-                    console.log("TASK TO EDIT ",taskToEdit)
+                console.log("TASK TO EDIT ", taskToEdit)
                 taskDomRenderers.taskEditEntryToForm(taskToEdit)
             }
         })
