@@ -6,5 +6,15 @@ export default {
             task: task,
             complete: false
         }
+    },
+
+
+    booleanFactoryFunction(taskInput, dateInput) {
+        return {
+            user_id: 1,
+            date: dateInput,
+            task: taskInput,
+            complete: true
+        }
     }
 }
