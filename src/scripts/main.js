@@ -1,5 +1,12 @@
 import taskDomRenderers from "./tasks/domRenderer.js"
-import API from "./tasks/data.js";
+import API from "./tasks/data.js"
+import taskEventListener from "./tasks/eventListeners.js"
+import eventsAPI from "./events/data.js"
+import renderDom from "./events/domRenderer.js"
+import addNewEventManager from "./events/eventListeners.js"
+import messageAPI from "./messages/data.js"
+import messageHTML from "./messages/htmlMaker.js"
+import messageDomRenderer from "./messages/domRenderer.js"
 import newsAPI from "./news/data.js";
 import htmlMaker from "./news/htmlMaker.js";
 import newsDomRenderers from "./news/domRenderer.js";
@@ -9,15 +16,55 @@ console.log("We got this, guys.")
 
 taskDomRenderers.taskFormRender()
 API.getTaskData()
-.then(tasks => tasks.forEach(task => {
-    console.log(task)
-    taskDomRenderers.taskRender(task)
-})
-)
+    .then(tasks => tasks.forEach(task => {
+        // console.log(task)
+        taskDomRenderers.taskRender(task)
+        // taskEventListener.taskEditButtonEventListener()
+    })
+    )
+taskEventListener.taskDeleteEditButtonEventListener()
+taskEventListener.taskCheckboxEventListener()
+
 
 newsAPI.getNewsArticle()
+    .then(data => {
+        // Work with JSON data here
+        // console.log(data)
+    })
+
+newsDomRenderers.newsFormRender()
+
+
+
+eventsAPI.getEventsData()
+    .then(events => renderDom.renderEvents(events)
+    )
+    renderDom.renderCreateEventForm()
+    addNewEventManager.attachEventListenerToNewEventButton()
+
+newsAPI.getNewsArticle()
+<<<<<<< HEAD
 .then(data => {
    
         console.log("this is it",data)
     })
     newsDomRenderers.newsFormRender()
+=======
+    .then(data => {
+        // Work with JSON data here
+        // console.log(data)
+    })
+
+
+newsDomRenderers.newsFormRender()
+
+    
+
+
+messageDomRenderer.messageFormRender()
+    messageAPI.getMessageData()
+    .then(message => message.forEach(message=> {
+        messageDomRenderer.messageRender(message)
+     })
+    )
+>>>>>>> 347ddfe581d2a90d369eda082bf735aba55df7a7
