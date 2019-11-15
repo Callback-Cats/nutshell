@@ -3,6 +3,7 @@ import API from "./tasks/data.js"
 import taskEventListener from "./tasks/eventListeners.js"
 import eventsAPI from "./events/data.js"
 import renderDom from "./events/domRenderer.js"
+import addNewEventManager from "./events/eventListeners.js"
 import messageAPI from "./messages/data.js"
 import messageHTML from "./messages/htmlMaker.js"
 import messageDomRenderer from "./messages/domRenderer.js"
@@ -37,7 +38,8 @@ newsDomRenderers.newsFormRender()
 eventsAPI.getEventsData()
     .then(events => renderDom.renderEvents(events)
     )
-
+    renderDom.renderCreateEventForm()
+    addNewEventManager.attachEventListenerToNewEventButton()
 
 newsAPI.getNewsArticle()
     .then(data => {
