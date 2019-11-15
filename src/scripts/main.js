@@ -1,6 +1,7 @@
 import taskDomRenderers from "./tasks/domRenderer.js"
 import API from "./tasks/data.js";
 import newsAPI from "./news/data.js";
+import htmlMaker from "./news/htmlMaker.js";
 import newsDomRenderers from "./news/domRenderer.js";
 
 console.log("We got this, guys.")
@@ -16,8 +17,7 @@ API.getTaskData()
 
 newsAPI.getNewsArticle()
 .then(data => {
-        // Work with JSON data here
-        console.log(data)
+   
+        console.log("this is it",data)
     })
-
     newsDomRenderers.newsFormRender()
