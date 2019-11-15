@@ -11,7 +11,8 @@ const eventsHtmlMaker = {
         <h3>${event.name}</h3>
         <p>${event.date}<p>
         <p>${event.location}<p>
-        <button type= "button" id="saveEntry--${event.id}" class="save-button">Save</button>
+        <button type= "button" id="editEntry--${event.id}" class= "edit-button">Edit</button>
+        <button type= "button" id="deleteEntry--${event.id}" class= "delete-button">Delete</button>
     `
     },
 
