@@ -1,6 +1,3 @@
-
-
-
 export default {
     messageHtmlFormMaker () {
         return `
@@ -8,7 +5,7 @@ export default {
 <h1>Messages</h1>
 <label for="text">New Message:</label>
 <br>
-<input type="text" name="text" id="">
+<input type="text" name="text" id="sender">
 <br>
 <label for="date"></label>
 <br>
@@ -21,11 +18,12 @@ export default {
 
     messageListRenderer(messageObj) {
         return `
-    <p>from who:${messageObj.id}</p>
-    <p>message:${messageObj.message}</p>
-    <p>time sent ${messageObj.time_stamp}</p>
+    <p>from who: ${messageObj.id}</p>
+    <p>message: ${messageObj.message}</p>
+    <p>date: ${messageObj.date}</p>
     <input type="submit" id="edit" name="edit" value="Edit">
+    <input type="submit" id="delete" name="delete" value="Delete">
 </article>
     `
-}
+ }
 }

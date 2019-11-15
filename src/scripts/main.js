@@ -50,11 +50,12 @@ newsAPI.getNewsArticle()
 
 newsDomRenderers.newsFormRender()
 
-messageAPI.getMessageData()
-    .then(message => message.forEach(message => {
-        // console.log(message)
-        messageDomRenderer.messageRender(message)
-    })
-    )
+    
 
-    // messageDomRenderer.messageFormRender()
+
+messageDomRenderer.messageFormRender()
+    messageAPI.getMessageData()
+    .then(message => message.forEach(message=> {
+        messageDomRenderer.messageRender(message)
+     })
+    )
